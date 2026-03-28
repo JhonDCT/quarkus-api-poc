@@ -34,7 +34,7 @@ jobs:
           context: .
           push: true
           tags: studenttestingproduct.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_D4E50ED8EE90408C914087C5385E9AAE }}/product-api:${{ github.sha }}
-          file: ./Dockerfile
+          file: ./src/main/docker/Dockerfile.jvm
 
   deploy:
     runs-on: ubuntu-latest
